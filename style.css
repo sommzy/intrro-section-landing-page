@@ -20,9 +20,18 @@ header {
     width: 560px;
     /* align-items: center; */
 }
-.dropdown{
-    cursor: pointer;    
+
+.dropdown {
+    cursor: pointer;
+    background-image: url(icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 14px right 8px;
 }
+
+.dropdown:hover {
+    background-image: url(icon-arrow-up.svg);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -33,10 +42,12 @@ ul {
     padding: 0;
     margin: 0;
 }
-.dropbutton{
+
+.dropbutton {
     position: relative;
     display: inline-block;
 }
+
 .dropdownlist {
     list-style-type: none;
     padding: 0 10px;
@@ -48,15 +59,16 @@ ul {
 li a.secondlink {
     background-color: #fff;
     color: hsl(0, 0%, 41%);
-    padding: 10px 40px;
+    padding: 10px 30px;
     display: block;
 }
 
 .secondlink:hover {
     border: none;
     color: #fff;
-    /* border-radius: none; */
     background-color: hsl(0, 0%, 41%);
+    border-radius: 0;
+    transition: all 0.3s ease-out;
 }
 
 li a {
@@ -65,24 +77,25 @@ li a {
     color: hsl(0, 0%, 41%);
     padding: 9px 20px;
     margin: 0;
+
+
 }
 
 li a:hover {
     border: 2px solid hsl(0, 0%, 41%);
     color: hsl(0, 0%, 41%);
-    /* border-radius: 15px; */
+    border-radius: 16px;
+    transition: all 0.1s ease-out;
 }
 
 p {
     font-size: 18px;
     color: hsl(0, 0%, 41%);
-    line-height:1.6;
+    line-height: 1.6;
 }
 
 .dropdownmenu {
-    /* display: none; */
     visibility: hidden;
-    /* min-width: 160px; */
     position: absolute;
     font-size: 15px;
     z-index: 1;
@@ -90,11 +103,10 @@ p {
 }
 
 .dropbutton:hover .dropdownmenu {
-    /* display: block; */
     visibility: visible;
 }
 
-article span{
+article span {
     font-size: 4.5rem;
     line-height: 1.0;
     color: hsl(0, 0%, 8%);
@@ -102,7 +114,7 @@ article span{
 }
 
 article {
-line-height: 1.5;
+    line-height: 1.5;
 }
 
 section {
@@ -111,4 +123,22 @@ section {
     margin: 0;
     justify-content: space-between;
     align-items: center;
+}
+
+.button_link {
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.button_link:hover {
+    background-color: black;
+    color: white;
+    border-radius: 0;
+    transition: all 0.4s ease-out;
+}
+.none{
+    display: none;
 }
