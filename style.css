@@ -14,10 +14,10 @@ header {
     color: hsl(0, 0%, 8%);
 }
 
-.first_nav {
+.first_navigation {
     display: flex;
     justify-content: space-between;
-    width: 560px;
+    width: 530px;
     /* align-items: center; */
 }
 
@@ -111,25 +111,32 @@ article span {
     line-height: 1.0;
     color: hsl(0, 0%, 8%);
     font-weight: bold;
+    /* float: left; */
 }
 
 article {
     line-height: 1.5;
+    padding: 7rem 0 0 1rem;
+    margin: 0;
 }
 
 section {
-    display: flex;
-    padding: 2rem 5rem 0rem 8rem;
+    /* display: flex; */
+    padding: 2rem 1.5rem 0rem 6.5rem;
     margin: 0;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+.destop-img {
+    float: right;
 }
 
 .button_link {
     background-color: hsl(0, 0%, 8%);
     color: hsl(0, 0%, 98%);
-    padding: 15px 20px;
-    border-radius: 10px;
+    padding: 18px 30px;
+    border-radius: 15px;
     text-decoration: none;
 }
 
@@ -139,6 +146,108 @@ section {
     border-radius: 0;
     transition: all 0.4s ease-out;
 }
-.none{
+
+.none {
     display: none;
+}
+
+.imgbox {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 7.7rem;
+}
+
+.media-img-box {
+    float: right;
+    display: none;
+    /* visibility: hidden; */
+}
+
+@media screen and (max-width:800px) {
+    .media-none {
+        display: none;
+    }
+
+    .none {
+        display: block;
+    }
+
+    section {
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+    }
+
+    article span {
+        font-size: 2.2rem;
+    }
+
+    .media-dropbutton {
+        position: relative;
+        display: inline-block;
+
+    }
+
+    .hover-img {
+        position: absolute;
+        right: 0;
+        /* width: ; */
+        display: none;
+        padding: 10px 15px;
+        background-color: white;
+        height: 100vh;
+        z-index: 1;
+        width: 300px;
+    }
+
+    .media-dropdown {
+        cursor: pointer;
+    }
+
+    .hover-link {
+        display: block;
+        text-decoration: none;
+        font-size: 15px;
+        color: hsl(0, 0%, 41%);
+        padding: 9px 20px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .hover-link:hover {
+        border: 2px solid hsl(0, 0%, 41%);
+        border-radius: 16px;
+        transition: all 0.1s ease-out;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        /* height: 28vh; */
+        margin: 0;
+
+        flex-direction: column;
+    }
+
+    .media-dropbutton:hover .hover-img {
+        display: block;
+    }
+
+    .imgbox {
+        padding: 0;
+    }
+
+    .destop-img {
+        display: none;
+        /* visibility: hidden; */
+    }
+
+    .media-img-box {
+        float: none;
+        display: block;
+        /* visibility: visible; */
+        width: 100%;
+        /* margin-top: -35rem; */
+    }
 }
